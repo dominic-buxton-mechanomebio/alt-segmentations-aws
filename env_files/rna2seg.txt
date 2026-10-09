@@ -1,0 +1,22 @@
+# © 2026 Mechanome Bio. Proprietary and confidential.
+# RNA2seg env (python 3.11). rna2seg itself is installed afterwards with --no-deps (see RNA2seg.ipynb):
+# it pins sopa==2.0.4, which can't read zarr v3. sopa 2.1.6 is the newest release that still has
+# the private sopa modules rna2seg imports and doesn't pin zarr<3.
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0
+torchvision==0.21.0
+sopa==2.1.6
+spatialdata>=0.6
+instanseg-torch==0.0.9  # rna2seg pins 0.0.8, whose bioio dependency needs zarr<2.18
+cellpose==3.0.8
+einops==0.8.0
+huggingface-hub
+tensorboard
+albumentations==1.4
+opencv-python
+rasterio
+geopandas
+scikit-learn
+tqdm
+matplotlib
+ipykernel

@@ -1,0 +1,40 @@
+# © 2026 Mechanome Bio. Proprietary and confidential.
+# Shared env (python 3.11) for BIDCell, Segger and Cellist. Also the kernel for GeneSegNet + example notebooks.
+# Segger itself is installed afterwards with --no-deps (see setup.ipynb): it pins numpy<2,
+# but spatialdata>=0.6 (needed to read zarr v3 stores) needs numpy>=2.
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.0
+torchvision==0.20.0
+lightning
+torchmetrics
+cupy-cuda12x
+
+# methods
+bidcell
+cellist
+cellpose==3.1.1.1
+
+# segger's dependencies, minus the numpy<2 pin
+torch-geometric
+click
+geopandas
+pandas
+pyarrow
+scipy
+shapely
+scikit-learn
+pyyaml
+pqdm
+scanpy
+dask
+dask-geopandas
+rtree
+
+# data handling
+spatialdata>=0.6
+rasterio
+tifffile
+scikit-image
+opencv-python
+matplotlib
+ipykernel

@@ -1,0 +1,15 @@
+# © 2026 Mechanome Bio. Proprietary and confidential.
+# GeneSegNet env (python 3.8, torch 1.12.1), per the GeneSegNet README.
+# The repo's requirements.txt is pip-installed on top (see GeneSegNet.ipynb).
+# Not used as a notebook kernel: scripts are called with `conda run`.
+name: genesegnet
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch=1.12.1
+  - torchvision=0.13.1
+  - torchaudio=0.12.1
+  - cudatoolkit=11.3
+  - pip
